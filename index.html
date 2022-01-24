@@ -15,16 +15,32 @@
     <header>
 		<div class="container">
 			<div class="col-12">
-				<div class="menu-up">
+				<div class="menu-up d-flex justify-content-between align-items-center">
 					<img src="./img/Logo.svg" alt="Logo">
-					<a href="tel:+73472222222" class="menu-up__tel">8(347) 222 22 22</a>
+					<form action="" class="search" method="">
+						<input type="text" class="search__inp" name="search-request" placeholder="Поиск" value="" size="40">
+						<button type="submit" class="search__btn" value="Искать"></button>
+					</form>
+					<a href="tel:+73472222222" class="menu-up__tel tel">8(347) 222 22 22</a>
+					<div class="social-network">
+						<a href="#"><img src="./img/002-instagram.svg" alt=""></a>
+						<a href="#"><img src="./img/003-whatsapp.svg" alt=""></a>
+						<a href="#"><img src="./img/004-vk.svg" alt=""></a>
+						<a href="#"><img src="./img/001-youtube.svg" alt=""></a>
+					</div>
+					<div class="cart d-flex align-items-center">
+						<a href="#" class="cart__link"><img src="./img/smart-cart.svg" alt="">Корзина</a>
+						<div class="cart__mes-q">2</div>
+						<div class="cart__sum">1,737 &#8381</div>
+					</div>
+					<a href="#" class="lc-link"><img src="./img/user-interface.svg" alt="">Войти</a>
 				</div>
 			</div>
 		</div>
 		<div class="container-fluid menu-bg">
 			<div class="container">
 				<div class="col-12">
-					<nav class="menu">
+					<nav class="menu d-flex justify-content-between align-items-center">
 						<a href="#" class="menu__link">Сортировка</a>
 						<a href="#" class="menu__link">Интернет магазин</a>
 						<a href="#" class="menu__link">О нас</a>
@@ -38,6 +54,47 @@
 			</div>
 		</div>     
     </header>
+	<section class="container-fluid">
+		<div class="main-baner d-flex align-items-center" style="background-image: url(./img/main-bg.png);">
+			<div class="container">
+				<div class="col-md-6">
+					<div class="main-baner__title">
+						Вывоз мусора в Уфе <br>
+						<span>за 200 рублей</span>
+					</div>
+					<div class="main-baner__text pt-3 pb-2">
+						Повторной переработке поддается 60-70% <br>
+						содержимого нашего мусорного ведра
+					</div>
+					<div class="button main-baner__button mt-5">Оформить заказ</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="container pb-4">
+		<div class="about__title mt-5 mb-4">О нас</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="about__text">
+							<p> Примерно 60-70% того, что вы ежедневно выбрасываете в мусорное ведро, 
+							можно сдать на переработку. Зачем это делать? </p>
+							<span>Чтобы избавить планету от ковра мусора, который с 
+							каждым годом становится все больше.</span>
+						</div>
+					</div>
+					<div class="col-md-6">				
+						<div class="about__text">
+							<p> Все что вам нужно: перестать выбрасывать вместе с остальным мусором пластик, бумагу, конмервы, аллюминиевые банки, полиэтиленовые мешки и связаться с нами. 
+							Мы приедем, заберем ваш мусор и отправим его на переработку.  </p>
+							<span>Единственное условие — мусор должен быть чистым и отсортированным.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
     <script src="./js/script.js"></script>
   </body>
 </html>
