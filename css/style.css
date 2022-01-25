@@ -52,6 +52,11 @@ body {
   color: #000000;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 a {
   text-decoration: none;
   letter-spacing: 0.01em;
@@ -206,7 +211,7 @@ a:hover {
 }
 
 .main-baner {
-  height: 700px;
+  min-height: 700px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -244,12 +249,6 @@ a:hover {
   background: #FFA524;
 }
 
-.about__title {
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 37px;
-}
-
 .about__text {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -257,6 +256,19 @@ a:hover {
 .about__text span {
   color: #02AC8F;
   font-weight: bold;
+}
+
+.title-1 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+}
+
+.title-2 {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: #fff;
 }
 
 .carousel-inner {
@@ -326,5 +338,34 @@ a:hover {
 
 .carousel-indicators {
   bottom: -56px;
+}
+
+.help {
+  min-height: 407px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.help__list__item {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.063rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.help__list__item::before {
+  position: absolute;
+  content: "";
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/trash.svg");
+  width: 20px;
+  height: 20px;
+  left: 0px;
+  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
