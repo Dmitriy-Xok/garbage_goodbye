@@ -368,4 +368,29 @@ a:hover {
   left: 0px;
   top: 0;
 }
+
+.proces-step {
+  min-height: 420px;
+}
+
+.footer {
+  min-height: 404px;
+  background-color: rgba(2, 172, 143, 0.2);
+}
+
+.footer__list a {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.footer__list a:hover {
+  color: var(--color-secondary);
+}
+
+.footer__list li.active > a {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */
