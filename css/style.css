@@ -1,36 +1,46 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/montserrat-v21-latin-regular.eot");
-  /* IE9 Compat Modes */
-  src: local(""), url("../fonts/montserrat-v21-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v21-latin-regular.woff") format("woff"), url("../fonts/montserrat-v21-latin-regular.ttf") format("truetype"), url("../fonts/montserrat-v21-latin-regular.svg#Montserrat") format("svg");
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/montserrat-v21-latin-500.eot");
-  src: local(""), url("../fonts/montserrat-v21-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-latin-500.woff2") format("woff2"), url("../fonts/montserrat-v21-latin-500.woff") format("woff"), url("../fonts/montserrat-v21-latin-500.ttf") format("truetype"), url("../fonts/montserrat-v21-latin-500.svg#Montserrat") format("svg");
-}
-
+/* montserrat-600 - cyrillic */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/montserrat-v21-latin-600.eot");
-  src: local(""), url("../fonts/montserrat-v21-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-latin-600.woff2") format("woff2"), url("../fonts/montserrat-v21-latin-600.woff") format("woff"), url("../fonts/montserrat-v21-latin-600.ttf") format("truetype"), url("../fonts/montserrat-v21-latin-600.svg#Montserrat") format("svg");
+  src: url("../fonts/montserrat-v21-cyrillic-600.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v21-cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-cyrillic-600.woff2") format("woff2"), url("../fonts/montserrat-v21-cyrillic-600.woff") format("woff"), url("../fonts/montserrat-v21-cyrillic-600.ttf") format("truetype"), url("../fonts/montserrat-v21-cyrillic-600.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
+/* montserrat-regular - cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v21-cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v21-cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v21-cyrillic-regular.woff") format("woff"), url("../fonts/montserrat-v21-cyrillic-regular.ttf") format("truetype"), url("../fonts/montserrat-v21-cyrillic-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+
+/* montserrat-500 - cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-v21-cyrillic-500.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v21-cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-cyrillic-500.woff2") format("woff2"), url("../fonts/montserrat-v21-cyrillic-500.woff") format("woff"), url("../fonts/montserrat-v21-cyrillic-500.ttf") format("truetype"), url("../fonts/montserrat-v21-cyrillic-500.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+
+/* montserrat-700 - cyrillic */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/montserrat-v21-latin-700.eot");
-  src: local(""), url("../fonts/montserrat-v21-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v21-latin-700.woff") format("woff"), url("../fonts/montserrat-v21-latin-700.ttf") format("truetype"), url("../fonts/montserrat-v21-latin-700.svg#Montserrat") format("svg");
+  src: url("../fonts/montserrat-v21-cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v21-cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v21-cyrillic-700.woff2") format("woff2"), url("../fonts/montserrat-v21-cyrillic-700.woff") format("woff"), url("../fonts/montserrat-v21-cyrillic-700.ttf") format("truetype"), url("../fonts/montserrat-v21-cyrillic-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
 }
 
 /*---common---*/
@@ -50,6 +60,10 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #000000;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1164px;
 }
 
 .container-fluid {
@@ -136,7 +150,7 @@ a:hover {
 }
 
 .lc-link img {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .lc-link:hover {
@@ -215,6 +229,14 @@ a:hover {
   display: inline-block;
 }
 
+.social-network__link {
+  margin-right: 5px;
+}
+
+.social-network__link:last-child {
+  margin-right: 0px;
+}
+
 .main-baner {
   min-height: 700px;
   background-repeat: no-repeat;
@@ -238,20 +260,32 @@ a:hover {
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .main-baner__button {
+  display: inline-block;
   width: 184px;
   height: 48px;
   background: #FFE121;
   font-weight: 600;
   font-size: 0.938rem;
   line-height: 1.063rem;
-  padding: 15px 25px;
+  padding: 15px 24px;
 }
 
 .main-baner__button:hover {
   background: #FFA524;
+}
+
+.about {
+  padding-bottom: 100px;
+}
+
+.about__title {
+  margin-top: 72px;
+  margin-bottom: 30px;
 }
 
 .about__text {
@@ -352,6 +386,10 @@ a:hover {
   background-size: cover;
 }
 
+.help-box {
+  margin-top: 10px;
+}
+
 .help__list__item {
   position: relative;
   font-size: 0.875rem;
@@ -386,7 +424,7 @@ a:hover {
 .proces-step__list__item {
   min-width: 206px;
   max-width: 206px;
-  margin-right: 30px;
+  margin-right: 27px;
 }
 
 .proces-step__list__item:last-child {
@@ -422,7 +460,7 @@ a:hover {
 .proces-step__list__item__hide-text::before {
   position: absolute;
   content: '';
-  bottom: -20px;
+  bottom: -30px;
   left: calc(50% - 14px);
   width: 27px;
   height: 10px;
@@ -469,7 +507,7 @@ a:hover {
 .proces-step__list__item__text {
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: 600;
   font-size: 1.063rem;
   line-height: 1.235rem;
@@ -487,7 +525,7 @@ a:hover {
   font-size: 0.938rem;
   line-height: 1.125rem;
   color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 15px;
+  margin-bottom: 19px;
 }
 
 .footer__list a:hover {
@@ -508,7 +546,7 @@ a:hover {
   font-size: 0.938rem;
   line-height: 1.125rem;
   color: #FFFFFF;
-  padding: 12px 20px;
+  padding: 12px 19px;
   margin-top: 40px;
 }
 
@@ -528,6 +566,11 @@ a:hover {
   line-height: 1.125rem;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 40px;
+}
+
+.footer__social-network__link {
+  display: inline-block;
+  margin-right: 12px;
 }
 
 .footer-end {
