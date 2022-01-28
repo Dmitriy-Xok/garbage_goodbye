@@ -16,12 +16,12 @@
 		<div class="container">
 			<div class="col-12">
 				<div class="menu-up d-flex justify-content-between align-items-center">
-					<img src="./img/Logo.svg" alt="Logo">
+					<div class="menu-up__logo"><img src="./img/Logo.svg" alt="Logo" width="100%"></div>
 					<form action="" class="search" method="">
 						<input type="text" class="search__inp" name="search-request" placeholder="Поиск" value="" size="40">
 						<button type="submit" class="search__btn" value="Искать"></button>
 					</form>
-					<a href="tel:+73472222222" class="menu-up__tel tel">8 (347) 222 22 22</a>
+					<a href="tel:+73472222222" class="menu-up__tel tel d-none d-lg-block">8 (347) 222 22 22</a>
 					<div class="social-network">
 						<a href="#" class="social-network__link"><img src="./img/002-instagram.svg" alt=""></a>
 						<a href="#" class="social-network__link"><img src="./img/003-whatsapp.svg" alt=""></a>
@@ -29,7 +29,7 @@
 						<a href="#" class="social-network__link"><img src="./img/001-youtube.svg" alt=""></a>
 					</div>
 					<div class="cart d-flex align-items-center">
-						<a href="#" class="cart__link"><img src="./img/smart-cart.svg" alt="">Корзина</a>
+						<a href="#" class="cart__link"><img src="./img/smart-cart.svg" alt=""><span>Корзина</span></a>
 						<div class="cart__mes-q">2</div>
 						<div class="cart__sum">1,737 &#8381</div>
 					</div>
@@ -39,8 +39,9 @@
 		</div>
 		<div class="container-fluid menu-bg">
 			<div class="container">
-				<div class="col-12">
-					<nav class="menu d-flex justify-content-between align-items-center">
+				<div class="col-12 menu-box d-flex justify-content-end justify-content-lg-between align-items-center">
+					<div class="menu__icon d-inline-block d-lg-none" onclick="openMenu()"><img src="./img/menu_icon.svg" alt=""></div>
+					<nav id="myNav" class="menu">
 						<a href="#" class="menu__link">Сортировка</a>
 						<a href="#" class="menu__link">Интернет магазин</a>
 						<a href="#" class="menu__link">О нас</a>
@@ -48,12 +49,14 @@
 						<a href="#" class="menu__link">Партнерство</a>
 						<a href="#" class="menu__link">Контакты</a>
 						<a href="#" class="menu__link">Поддержать нас</a>
-						<a href="#" class="button menu__button">Оформить заказ</a>
 					</nav>
+					<a href="tel:+73472222222" class="menu-up__tel tel d-block d-lg-none">8 (347) 222 22 22</a>
+					<a href="#" class="button menu__button">Оформить заказ</a>
 				</div>
 			</div>
 		</div>     
     </header>
+	<div id="overlay" class="overlay"></div>
 	<section class="container-fluid">
 		<div class="main-baner d-flex align-items-center" style="background-image: url(./img/main-bg.png);">
 			<div class="container">
@@ -66,7 +69,7 @@
 						Повторной переработке поддается 60-70% <br>
 						содержимого нашего мусорного ведра
 					</div>
-					<a href="#" class="button main-baner__button mt-5">Оформить заказ</a>
+					<a href="#" class="button main-baner__button mt-lg-5">Оформить заказ</a>
 				</div>
 			</div>
 		</div>
@@ -74,7 +77,7 @@
 	<section class="container about">
 		<div class="title-1 about__title">О нас</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-12 col-lg-6">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="about__text">
@@ -93,7 +96,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-12 col-lg-6">
 				<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 					  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -127,12 +130,13 @@
 		<div class="help d-flex align-items-center" style="background-image: url(./img/Mask_Group.png);">
 			<div class="container">
 				<div class="row help-box">
-					<div class="col-md-3">
-						<div class="title-2">
+					<div class="col-6 col-lg-3">
+						<div class="title-2 help-box__title-2">
 							Памятка для тех, кто хочет нам помочь
 						</div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-lg-0 d-lg-none"></div>
+					<div class="col-6 col-lg-3">
 						<ul class="help__list">
 							<li class="help__list__item">Мусор на переработку <b>принимается в чистом виде</b> (мойте)</li>
 							<li class="help__list__item ">Внимательно смотрите маркировку на упаковке. Если нет маркировки — <b>не сдавать.</b></li>
@@ -140,7 +144,7 @@
 							<li class="help__list__item ">Все, что можно смять, <b>смело мните</b></li>
 						</ul>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-lg-3">
 						<ul class="help__list">
 							<li class="help__list__item"><b>Сортируйте</b> по инструкции, по видам</li>
 							<li class="help__list__item "><b>Не кладите</b> предметы друг в друга. Например: мешки в бутылку</li>
@@ -148,7 +152,7 @@
 							<li class="help__list__item ">Батарейки и аккумуляторы <b>принимаем</b></li>
 						</ul>
 					</div>
-					<div class="col-md-3">
+					<div class="col-6 col-lg-3">
 						<ul class="help__list">
 							<li class="help__list__item">Так же <b>отдельно</b> можете сдать провода, кабели, шнуры</li>
 							<li class="help__list__item ">Твердым пластиком считаеся всё, что <b>твёрже пакета</b></li>
@@ -166,65 +170,77 @@
 				Как мы обрабатываем?
 			</div>
 		</div>
-		<div class="proces-step__list d-flex justify-content-between">
-			<div class="proces-step__list__item d-flex flex-column align-items-center">
-				<div class="proces-step__list__item__pic">
-					<div class="proces-step__list__item__pic-ellipse"></div>
-					<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/trash_2.svg)"></div>
+		<div class="proces-step__list">
+			<div class="row justify-content-center">
+				<div class="col-md-4 col-xl-auto d-flex justify-content-center">
+					<div class="proces-step__list__item d-flex flex-column align-items-center">
+						<div class="proces-step__list__item__pic">
+							<div class="proces-step__list__item__pic-ellipse"></div>
+							<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/trash_2.svg)"></div>
+						</div>
+						<div class="proces-step__list__item__text">
+							Собираем
+						</div>
+						<div class="proces-step__list__item__hide-text">
+							Распределяем весь собранный вами мусор по группам 
+						</div>
+					</div>
 				</div>
-				<div class="proces-step__list__item__text">
-					Собираем
+				<div class="col-md-4 col-xl-auto d-flex justify-content-center">
+					<div class="proces-step__list__item d-flex flex-column align-items-center">
+						<div class="proces-step__list__item__pic">
+							<div class="proces-step__list__item__pic-ellipse"></div>
+							<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/auto.svg)"></div>
+						</div>
+						<div class="proces-step__list__item__text">
+							Забираем
+						</div>
+						<div id="hide-text" class="proces-step__list__item__hide-text">
+							Увозим ваш мусор в сортировочный цех 
+						</div>
+					</div>
 				</div>
-				<div class="proces-step__list__item__hide-text">
-					Распределяем весь собранный вами мусор по группам 
+				<div class="col-md-4 col-xl-auto d-flex justify-content-center">
+					<div class="proces-step__list__item d-flex flex-column align-items-center">
+						<div class="proces-step__list__item__pic">
+							<div class="proces-step__list__item__pic-ellipse"></div>
+							<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/korobka.svg)"></div>
+						</div>
+						<div class="proces-step__list__item__text">
+							Храним
+						</div>
+						<div id="hide-text" class="proces-step__list__item__hide-text">
+							До сортировки весь мусор хранится на нашем складе 
+						</div>
+					</div>
 				</div>
-			</div>
-			<div id="step-item" class="proces-step__list__item d-flex flex-column align-items-center">
-				<div class="proces-step__list__item__pic">
-					<div class="proces-step__list__item__pic-ellipse"></div>
-					<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/auto.svg)"></div>
+				<div class="col-md-4 col-xl-auto d-flex justify-content-center">
+					<div class="proces-step__list__item d-flex flex-column align-items-center">
+						<div class="proces-step__list__item__pic">
+							<div class="proces-step__list__item__pic-ellipse"></div>
+							<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/sort.svg)"></div>
+						</div>
+						<div class="proces-step__list__item__text">
+							Сортируем
+						</div>
+						<div id="hide-text" class="proces-step__list__item__hide-text">
+							Финальный этап подготовки к переработке 
+						</div>
+					</div>
 				</div>
-				<div class="proces-step__list__item__text">
-					Забираем
-				</div>
-				<div id="hide-text" class="proces-step__list__item__hide-text">
-					Увозим ваш мусор в сортировочный цех 
-				</div>
-			</div>
-			<div id="step-item" class="proces-step__list__item d-flex flex-column align-items-center">
-				<div class="proces-step__list__item__pic">
-					<div class="proces-step__list__item__pic-ellipse"></div>
-					<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/korobka.svg)"></div>
-				</div>
-				<div class="proces-step__list__item__text">
-					Храним
-				</div>
-				<div id="hide-text" class="proces-step__list__item__hide-text">
-					До сортировки весь мусор хранится на нашем складе 
-				</div>
-			</div>
-			<div id="step-item" class="proces-step__list__item d-flex flex-column align-items-center">
-				<div class="proces-step__list__item__pic">
-					<div class="proces-step__list__item__pic-ellipse"></div>
-					<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/sort.svg)"></div>
-				</div>
-				<div class="proces-step__list__item__text">
-					Сортируем
-				</div>
-				<div id="hide-text" class="proces-step__list__item__hide-text">
-					Финальный этап подготовки к переработке 
-				</div>
-			</div>
-			<div id="step-item" class="proces-step__list__item d-flex flex-column align-items-center">
-				<div class="proces-step__list__item__pic">
-					<div class="proces-step__list__item__pic-ellipse"></div>
-					<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/send.svg)"></div>
-				</div>
-				<div class="proces-step__list__item__text">
-					Отправляем
-				</div>
-				<div id="hide-text" class="proces-step__list__item__hide-text">
-					Все собранные вещи отправляются на переработку
+				<div class="col-md-4 col-xl-auto d-flex justify-content-center">
+					<div class="proces-step__list__item d-flex flex-column align-items-center">
+						<div class="proces-step__list__item__pic">
+							<div class="proces-step__list__item__pic-ellipse"></div>
+							<div class="proces-step__list__item__pic-icon" style="background-image: url(./img/send.svg)"></div>
+						</div>
+						<div class="proces-step__list__item__text">
+							Отправляем
+						</div>
+						<div id="hide-text" class="proces-step__list__item__hide-text">
+							Все собранные вещи отправляются на переработку
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>		
@@ -233,7 +249,7 @@
 		<div class="footer d-flex align-items-center">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-12 col-md-4 col-lg-3">
 						<ul class="footer__list">
 							<li class="active"><a href="#">Главная</a></li>
 							<li><a href="#">Сортировка</a></li>
@@ -245,7 +261,7 @@
 							<li><a href="#">Поддержать нас</a></li>
 						</ul>
 					</div>
-					<div class="col-md-3">
+					<div class="col-12 col-md-4 col-lg-3">
 						<ul class="footer__list">
 							<li><a href="#">Способы оплаты</a></li>
 							<li><a href="#">Доставка</a></li>
@@ -254,8 +270,8 @@
 						</ul>
 						<a href="#" class="button footer__button">Оформить заказ</a>
 					</div>
-					<div class="col-md-3"></div>
-					<div class="col-md-3">
+					<div class="col-lg-3 d-none d-lg-block"></div>
+					<div class="col-12 col-md-4 col-lg-3">
 						<a href="tel:+73472222222" class="footer__tel tel d-block">8 (347) 222 22 22</a>
 						<div class="footer__adress">г. Уфа, ул. Пробная, д 132</div>
 						<div class="social-network">

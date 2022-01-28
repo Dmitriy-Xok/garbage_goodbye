@@ -71,6 +71,18 @@ body {
   padding-left: 0;
 }
 
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 139px;
+  z-index: 10;
+  background-color: #111;
+  opacity: 0.4;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -96,10 +108,23 @@ a:hover {
   background: rgba(2, 172, 143, 0.05);
 }
 
+.menu-box {
+  min-height: 63px;
+}
+
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 15px 0;
+  width: 100%;
 }
 
 .menu__link {
@@ -114,7 +139,7 @@ a:hover {
 }
 
 .menu__button {
-  width: 146px;
+  min-width: 146px;
   height: 33px;
   background: rgba(2, 172, 143, 0.2);
   font-weight: 600;
@@ -122,6 +147,7 @@ a:hover {
   line-height: 1.063rem;
   color: #018B7E;
   padding: 8px 10px;
+  margin-left: 38px;
 }
 
 .menu__button:hover {
@@ -310,6 +336,12 @@ a:hover {
   color: #fff;
 }
 
+.carousel-item__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .carousel-inner {
   border-radius: 10px;
 }
@@ -425,6 +457,8 @@ a:hover {
   min-width: 206px;
   max-width: 206px;
   margin-right: 27px;
+  margin-bottom: 35px;
+  min-height: 246px;
 }
 
 .proces-step__list__item:last-child {
