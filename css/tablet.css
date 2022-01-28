@@ -28,16 +28,9 @@
   .menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 49px;
     left: -24px;
     width: calc(100% + 48px);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     padding-left: 24px;
     background-color: #fff;
     z-index: 20;
@@ -48,12 +41,19 @@
     line-height: 54px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  .show {
+  .menu .dis-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .menu__icon {
+  .menu__btn {
     position: absolute;
     left: 0;
     cursor: pointer;
@@ -95,6 +95,10 @@
   .help {
     min-height: 517px;
   }
+  .help__list {
+    margin-left: 12px;
+    margin-right: 24px;
+  }
   .help-box {
     margin-bottom: 30px;
   }
@@ -103,6 +107,16 @@
     margin-top: 40px;
     font-size: 1.5rem;
     line-height: 1.8125rem;
+  }
+  .proces-step {
+    padding-top: 50px;
+  }
+  .proces-step__list {
+    margin-top: 30px;
+    margin-bottom: 17px;
+  }
+  .proces-step__list__item {
+    margin-bottom: 10px;
   }
   .proces-step__list__item__pic {
     width: 90px;
@@ -115,6 +129,12 @@
   .proces-step__list__item__pic-icon {
     width: 40px;
     height: 45px;
+  }
+  .proces-step__list__item__text {
+    margin-top: 30px;
+  }
+  .footer {
+    min-height: 376px;
   }
 }
 /*# sourceMappingURL=tablet.css.map */

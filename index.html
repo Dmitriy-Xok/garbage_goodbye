@@ -40,15 +40,17 @@
 		<div class="container-fluid menu-bg">
 			<div class="container">
 				<div class="col-12 menu-box d-flex justify-content-end justify-content-lg-between align-items-center">
-					<div class="menu__icon d-inline-block d-lg-none" onclick="openMenu()"><img src="./img/menu_icon.svg" alt=""></div>
-					<nav id="myNav" class="menu">
-						<a href="#" class="menu__link">Сортировка</a>
-						<a href="#" class="menu__link">Интернет магазин</a>
-						<a href="#" class="menu__link">О нас</a>
-						<a href="#" class="menu__link">Стать частью проекта</a>
-						<a href="#" class="menu__link">Партнерство</a>
-						<a href="#" class="menu__link">Контакты</a>
-						<a href="#" class="menu__link">Поддержать нас</a>
+					<div class="menu__btn d-inline-block d-lg-none"></div>
+					<nav class="menu">
+						<div class="dis-flex">
+							<a href="#" class="menu__link">Сортировка</a>
+							<a href="#" class="menu__link">Интернет магазин</a>
+							<a href="#" class="menu__link">О нас</a>
+							<a href="#" class="menu__link">Стать частью проекта</a>
+							<a href="#" class="menu__link">Партнерство</a>
+							<a href="#" class="menu__link">Контакты</a>
+							<a href="#" class="menu__link">Поддержать нас</a>
+						</div>
 					</nav>
 					<a href="tel:+73472222222" class="menu-up__tel tel d-block d-lg-none">8 (347) 222 22 22</a>
 					<a href="#" class="button menu__button">Оформить заказ</a>
@@ -56,7 +58,7 @@
 			</div>
 		</div>     
     </header>
-	<div id="overlay" class="overlay"></div>
+	<div class="overlay"></div>
 	<section class="container-fluid">
 		<div class="main-baner d-flex align-items-center" style="background-image: url(./img/main-bg.png);">
 			<div class="container">
@@ -136,36 +138,28 @@
 						</div>
 					</div>
 					<div class="col-6 col-lg-0 d-lg-none"></div>
-					<div class="col-6 col-lg-3">
-						<ul class="help__list">
-							<li class="help__list__item">Мусор на переработку <b>принимается в чистом виде</b> (мойте)</li>
-							<li class="help__list__item ">Внимательно смотрите маркировку на упаковке. Если нет маркировки — <b>не сдавать.</b></li>
-							<li class="help__list__item "><b>Не принимается</b> всё, что написано через дефис. Например: C/LDPE, C/PP</li>
-							<li class="help__list__item ">Все, что можно смять, <b>смело мните</b></li>
-						</ul>
-					</div>
-					<div class="col-6 col-lg-3">
-						<ul class="help__list">
-							<li class="help__list__item"><b>Сортируйте</b> по инструкции, по видам</li>
-							<li class="help__list__item "><b>Не кладите</b> предметы друг в друга. Например: мешки в бутылку</li>
-							<li class="help__list__item ">7 вид пластика (только твердый) <b>кладите отдельно</b> (всчтречается редко)</li>
-							<li class="help__list__item ">Батарейки и аккумуляторы <b>принимаем</b></li>
-						</ul>
-					</div>
-					<div class="col-6 col-lg-3">
-						<ul class="help__list">
-							<li class="help__list__item">Так же <b>отдельно</b> можете сдать провода, кабели, шнуры</li>
-							<li class="help__list__item ">Твердым пластиком считаеся всё, что <b>твёрже пакета</b></li>
-							<li class="help__list__item ">Картоном считается всё, что <b>плотнее</b> листа А4</li>
-							<li class="help__list__item "><b>Мы забираем мусор</b> из вашей квартиры. Наш выезд стоит — <b>100 рублей</b> в черте города.</li>
-						</ul>
-					</div>
+					<ul class="help__list col-12 col-lg-9">
+						<div class="row">
+							<li class="help__list__item col-6 col-lg-4">Мусор на переработку <b>принимается в чистом виде</b> (мойте)</li>
+							<li class="help__list__item col-6 col-lg-4">Внимательно смотрите маркировку на упаковке. Если нет маркировки — <b>не сдавать.</b></li>
+							<li class="help__list__item col-6 col-lg-4"><b>Не принимается</b> всё, что написано через дефис. Например: C/LDPE, C/PP</li>
+							<li class="help__list__item col-6 col-lg-4">Все, что можно смять, <b>смело мните</b></li>
+							<li class="help__list__item col-6 col-lg-4"><b>Сортируйте</b> по инструкции, по видам</li>
+							<li class="help__list__item col-6 col-lg-4"><b>Не кладите</b> предметы друг в друга. Например: мешки в бутылку</li>
+							<li class="help__list__item col-6 col-lg-4">7 вид пластика (только твердый) <b>кладите отдельно</b> (всчтречается редко)</li>
+							<li class="help__list__item col-6 col-lg-4">Батарейки и аккумуляторы <b>принимаем</b></li>
+							<li class="help__list__item col-6 col-lg-4">Так же <b>отдельно</b> можете сдать провода, кабели, шнуры</li>
+							<li class="help__list__item col-6 col-lg-4">Твердым пластиком считаеся всё, что <b>твёрже пакета</b></li>
+							<li class="help__list__item col-6 col-lg-4">Картоном считается всё, что <b>плотнее</b> листа А4</li>
+							<li class="help__list__item col-6 col-lg-4"><b>Мы забираем мусор</b> из вашей квартиры. Наш выезд стоит — <b>100 рублей</b> в черте города.</li>
+						</div>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="container proces-step">
-		<div class="col-md-3">
+		<div class="col-12 col-lg-3">
 			<div class="title-1">
 				Как мы обрабатываем?
 			</div>
@@ -292,6 +286,7 @@
 		</div>
 	</footer>
 	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

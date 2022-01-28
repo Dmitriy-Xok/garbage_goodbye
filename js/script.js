@@ -1,35 +1,34 @@
-"use strict";
-// /* Открыть */
-// function openNav() {
-//     document.getElementById("myNav").style.height = "400px";
-// }
-  
-// /* Закрыть */
-// function closeNav() {
-//     document.getElementById("myNav").style.height = "0%";
-// }
-// var menuLink = document.getElementsByClassName('menu__link');
-// menuLink.onclick = function(event) {
-//     document.getElementById("myNav").classList.toggle("show");
-// }
+$(document).ready(function(){
+    $('.menu__btn').click(function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+        $(this).next('.menu').slideUp(500);
+        } else {
+        $(this).next('.menu').slideDown(500);
+        }
+        $(this).toggleClass('active');
+        $('body').toggleClass('body-active');
+    });
+    $('.overlay').click(function(e) {
+		e.preventDefault();
+		$('body').removeClass('body-active');
+		$('.menu__btn').removeClass('active');
+        $(this).closest('body').find('.menu').slideUp(300);
+	});
+    $('.menu__link').click(function(e) {
+		e.preventDefault();
+		$('body').removeClass('body-active');
+		$('.menu__btn').removeClass('active');
+        $(this).closest('body').find('.menu').slideUp(300);
+	});
 
-// /* Когда пользователь нажимает на кнопку,
-// переключение между скрытием и отображением раскрывающегося содержимого */
-function openMenu() {
-    document.getElementById("myNav").classList.toggle("show");
-    // document.getElementById("overlay").classList.toggle("show");
-}
-  
-//   // Закройте выпадающее меню, если пользователь щелкает за его пределами
-// window.onclick = function(event) {
-// if (!event.target.matches('.menu')) {
-//     var dropdowns = document.getElementsByClassName("dropdown-content");
-//     var i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//     var openDropdown = dropdowns[i];
-//     if (openDropdown.classList.contains('show')) {
-//         openDropdown.classList.remove('show');
-//     }
-//     }
-// }
-// }
+    $('.proces-step__list__item').click(function(e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+        $(this).find('.proces-step__list__item__hide-text').slideUp(500);
+        } else {
+        $(this).find('.proces-step__list__item__hide-text').slideDown(500);
+        }
+        $(this).toggleClass('active');
+    });
+});

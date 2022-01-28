@@ -66,6 +66,9 @@ body {
   font-weight: normal;
   color: #000000;    
 } 
+.body-active {
+  overflow: hidden;
+}
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
   max-width: 1164px;
 }
@@ -83,6 +86,9 @@ body {
   z-index: 10;
   background-color: #111;
   opacity: 0.4;
+}
+.body-active .overlay {
+  display: block;
 }
 ul {
   list-style: none;
@@ -108,12 +114,25 @@ a:hover {
 .menu-box {
   min-height: 63px;
 }
+.menu__btn {
+  width: 20px;
+  background-image: url(../img/menu_icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.menu__btn.active {
+  background-image: url(../img/krestik_cancel.svg);
+}
 .menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;  
+  width: 100%;
+  .dis-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;  
+  }
   &__link {
     font-weight: 500;
     font-size: 0.75rem;
@@ -394,10 +413,12 @@ a:hover {
     margin-right: 0;
   }
   &__list__item:hover {
-    cursor: pointer;
+    cursor: pointer;    
   }
   &__list__item:hover > .proces-step__list__item__text {
     color: var(--color-primary); 
+  }
+  &__list__item.active > .proces-step__list__item__text {    
     transform: translate(0, 5px);
     transition: transform 0.5s linear;
   }
@@ -424,11 +445,6 @@ a:hover {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  &__list__item:hover > .proces-step__list__item__hide-text {
-    display: block;
-    transform: translate(0, 5px);
-    transition: transform 0.5s linear 5s;
-  }    
   &__list__item__pic {
     position: relative;
     width: 112px;
