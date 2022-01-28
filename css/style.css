@@ -493,11 +493,11 @@ a:hover {
   cursor: pointer;
 }
 
-.proces-step__list__item:hover > .proces-step__list__item__text {
+.proces-step__list__item:hover > .proces-step__box .proces-step__list__item__text {
   color: var(--color-primary);
 }
 
-.proces-step__list__item.active > .proces-step__list__item__text {
+.proces-step__list__item.active > .proces-step__box .proces-step__list__item__text {
   -webkit-transform: translate(0, 5px);
           transform: translate(0, 5px);
   -webkit-transition: -webkit-transform 0.5s linear;

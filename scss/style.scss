@@ -415,10 +415,10 @@ a:hover {
   &__list__item:hover {
     cursor: pointer;    
   }
-  &__list__item:hover > .proces-step__list__item__text {
+  &__list__item:hover > .proces-step__box .proces-step__list__item__text {
     color: var(--color-primary); 
   }
-  &__list__item.active > .proces-step__list__item__text {    
+  &__list__item.active > .proces-step__box .proces-step__list__item__text {    
     transform: translate(0, 5px);
     transition: transform 0.5s linear;
   }
@@ -443,7 +443,7 @@ a:hover {
     background-image: url(../img/arrow_right_step.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;    
   }
   &__list__item__pic {
     position: relative;

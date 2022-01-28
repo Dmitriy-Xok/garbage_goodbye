@@ -136,5 +136,18 @@
   .footer {
     min-height: 376px;
   }
+  .help-box {
+    margin-bottom: 0;
+  }
+  .help-box__title-2 {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 1.375rem;
+    line-height: 1.6875rem;
+  }
+  .help__list__item {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
 }
 /*# sourceMappingURL=tablet.css.map */
