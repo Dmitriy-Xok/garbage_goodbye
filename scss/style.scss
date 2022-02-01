@@ -154,8 +154,8 @@ a:hover {
     margin-left: 38px;
   }
   &__button:hover {
-    color: #018B7E;;
-    background: rgba(2, 172, 143, 0.4);
+    color: #018B7E;
+    background: rgba(2, 172, 143, 0.4);    
   }
 }
 .tel {
@@ -416,7 +416,7 @@ a:hover {
     cursor: pointer;    
   }
   &__list__item:hover > .proces-step__box .proces-step__list__item__text {
-    color: var(--color-primary); 
+    color: var(--color-primary);
   }
   &__list__item.active > .proces-step__box .proces-step__list__item__text {    
     transform: translate(0, 5px);
